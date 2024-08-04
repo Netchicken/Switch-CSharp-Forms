@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRunSwitch = new Button();
             lbxDayOfWeek = new ListBox();
             btnLoadDOW = new Button();
             lbxAppointment = new ListBox();
             SuspendLayout();
-            // 
-            // btnRunSwitch
-            // 
-            btnRunSwitch.Location = new Point(73, 12);
-            btnRunSwitch.Name = "btnRunSwitch";
-            btnRunSwitch.Size = new Size(75, 23);
-            btnRunSwitch.TabIndex = 0;
-            btnRunSwitch.Text = "Run Switch";
-            btnRunSwitch.UseVisualStyleBackColor = true;
-            btnRunSwitch.Click += btnRunSwitch_Click;
             // 
             // lbxDayOfWeek
             // 
@@ -81,15 +70,12 @@
             Controls.Add(lbxAppointment);
             Controls.Add(btnLoadDOW);
             Controls.Add(lbxDayOfWeek);
-            Controls.Add(btnRunSwitch);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button btnRunSwitch;
         private ListBox lbxDayOfWeek;
         private Button btnLoadDOW;
         private ListBox lbxAppointment;
