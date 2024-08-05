@@ -32,7 +32,6 @@ namespace Switch_CSharp_Forms
             switch (selectedDay)
             {
                 case "Monday":
-
                     if (!lbxAppointment.Items.Contains("Meeting on Monday"))
                     {
                         lbxAppointment.Items.Add("Meeting on Monday");
@@ -74,7 +73,6 @@ namespace Switch_CSharp_Forms
                         lbxAppointment.Items.Add("Meeting on Sunday");
                     }
                     break;
-
             }
         }
     }
