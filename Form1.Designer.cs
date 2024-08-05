@@ -31,6 +31,8 @@
             lbxDayOfWeek = new ListBox();
             btnLoadDOW = new Button();
             lbxAppointment = new ListBox();
+            btnStringOp = new Button();
+            lbxStringOp = new ListBox();
             SuspendLayout();
             // 
             // lbxDayOfWeek
@@ -62,11 +64,32 @@
             lbxAppointment.Size = new Size(159, 109);
             lbxAppointment.TabIndex = 3;
             // 
+            // btnStringOp
+            // 
+            btnStringOp.Location = new Point(456, 60);
+            btnStringOp.Name = "btnStringOp";
+            btnStringOp.Size = new Size(133, 25);
+            btnStringOp.TabIndex = 4;
+            btnStringOp.Text = "String Operations";
+            btnStringOp.UseVisualStyleBackColor = true;
+            btnStringOp.Click += btnStringOp_Click;
+            // 
+            // lbxStringOp
+            // 
+            lbxStringOp.FormattingEnabled = true;
+            lbxStringOp.ItemHeight = 15;
+            lbxStringOp.Location = new Point(464, 101);
+            lbxStringOp.Name = "lbxStringOp";
+            lbxStringOp.Size = new Size(328, 259);
+            lbxStringOp.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbxStringOp);
+            Controls.Add(btnStringOp);
             Controls.Add(lbxAppointment);
             Controls.Add(btnLoadDOW);
             Controls.Add(lbxDayOfWeek);
@@ -79,5 +102,7 @@
         private ListBox lbxDayOfWeek;
         private Button btnLoadDOW;
         private ListBox lbxAppointment;
+        private Button btnStringOp;
+        private ListBox lbxStringOp;
     }
 }
