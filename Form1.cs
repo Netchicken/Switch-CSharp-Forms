@@ -19,6 +19,7 @@ namespace Switch_CSharp_Forms
                 "Friday",
                 "Saturday",
                 "Sunday",
+                "Any Day",
             ];
 
             lbxDayOfWeek.Items.AddRange(myWeek.ToArray());
@@ -28,49 +29,49 @@ namespace Switch_CSharp_Forms
         {
             selectedDay = lbxDayOfWeek.SelectedItem.ToString();
             Text = selectedDay;
+            //is the apointment already made on that day?
+            //do the items in lbxappointment contain "Meeting on " + selectedDay?
+            bool isNotInListBox = !lbxAppointment.Items.Contains("Meeting on " + selectedDay);
 
             switch (selectedDay)
             {
+                case "Any Day":
                 case "Monday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Monday"))
+                    if (isNotInListBox || selectedDay == "Any Day")
                     {
                         lbxAppointment.Items.Add("Meeting on Monday");
                     }
                     break;
                 case "Tuesday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Tuesday"))
+                    if (isNotInListBox)
                     {
                         lbxAppointment.Items.Add("Meeting on Tuesday");
                     }
                     break;
                 case "Wednesday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Wednesday"))
+                    if (isNotInListBox)
                     {
                         lbxAppointment.Items.Add("Meeting on Wednesday");
                     }
                     break;
                 case "Thursday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Thursday"))
+                    if (isNotInListBox)
                     {
                         lbxAppointment.Items.Add("Meeting on Thursday");
                     }
                     break;
                 case "Friday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Friday"))
+                    if (isNotInListBox)
                     {
                         lbxAppointment.Items.Add("Meeting on Friday");
                     }
                     break;
                 case "Saturday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Saturday"))
-                    {
-                        lbxAppointment.Items.Add("Meeting on Saturday");
-                    }
-                    break;
+
                 case "Sunday":
-                    if (!lbxAppointment.Items.Contains("Meeting on Sunday"))
+                    if (!lbxAppointment.Items.Contains("No Weekend booking"))
                     {
-                        lbxAppointment.Items.Add("Meeting on Sunday");
+                        lbxAppointment.Items.Add("No Weekend booking");
                     }
                     break;
             }
