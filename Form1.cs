@@ -105,8 +105,8 @@ namespace Switch_CSharp_Forms
 
         private void btnStringOp_Click(object sender, EventArgs e)
         {
-            string name1 = "john";
-            string name2 = "john";
+            string name1 = txtName1.Text;
+            string name2 = txtName2.Text;
 
             string charName1 = "";
             int countName1 = 0;
@@ -140,9 +140,36 @@ namespace Switch_CSharp_Forms
 
             }
             lbxStringOp.Items.Add(name1 + " " + charName1 + " name1 total " + countName1);
-            lbxStringOp.Items.Add(name1 + " " + charName2 + " name2 total " + countName2);
+            lbxStringOp.Items.Add(name2 + " " + charName2 + " name2 total " + countName2);
 
 
+
+        }
+
+        private void btnTryParse_Click(object sender, EventArgs e)
+        {
+
+            int number;
+            if (int.TryParse(txtAmount.Text, out number))
+            {
+                if (number > 0 && number <= 10)
+                {
+                    Single Total = number * 65;
+                    MessageBox.Show("the total is " + Total);
+                }
+                else
+                {
+                    MessageBox.Show("Amount must be between 0 and 10");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Include a quantity");
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

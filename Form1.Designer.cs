@@ -33,6 +33,10 @@
             lbxAppointment = new ListBox();
             btnStringOp = new Button();
             lbxStringOp = new ListBox();
+            txtAmount = new TextBox();
+            btnTryParse = new Button();
+            txtName1 = new TextBox();
+            txtName2 = new TextBox();
             SuspendLayout();
             // 
             // lbxDayOfWeek
@@ -78,16 +82,51 @@
             // 
             lbxStringOp.FormattingEnabled = true;
             lbxStringOp.ItemHeight = 15;
-            lbxStringOp.Location = new Point(464, 101);
+            lbxStringOp.Location = new Point(460, 116);
             lbxStringOp.Name = "lbxStringOp";
             lbxStringOp.Size = new Size(328, 259);
             lbxStringOp.TabIndex = 5;
+            // 
+            // txtAmount
+            // 
+            txtAmount.Location = new Point(73, 283);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(100, 23);
+            txtAmount.TabIndex = 6;
+            // 
+            // btnTryParse
+            // 
+            btnTryParse.Location = new Point(73, 252);
+            btnTryParse.Name = "btnTryParse";
+            btnTryParse.Size = new Size(133, 25);
+            btnTryParse.TabIndex = 7;
+            btnTryParse.Text = "Try Parse";
+            btnTryParse.UseVisualStyleBackColor = true;
+            btnTryParse.Click += btnTryParse_Click;
+            // 
+            // txtName1
+            // 
+            txtName1.Location = new Point(489, 85);
+            txtName1.Name = "txtName1";
+            txtName1.Size = new Size(107, 23);
+            txtName1.TabIndex = 8;
+            // 
+            // txtName2
+            // 
+            txtName2.Location = new Point(611, 85);
+            txtName2.Name = "txtName2";
+            txtName2.Size = new Size(107, 23);
+            txtName2.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtName2);
+            Controls.Add(txtName1);
+            Controls.Add(btnTryParse);
+            Controls.Add(txtAmount);
             Controls.Add(lbxStringOp);
             Controls.Add(btnStringOp);
             Controls.Add(lbxAppointment);
@@ -95,7 +134,9 @@
             Controls.Add(lbxDayOfWeek);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -104,5 +145,9 @@
         private ListBox lbxAppointment;
         private Button btnStringOp;
         private ListBox lbxStringOp;
+        private TextBox txtAmount;
+        private Button btnTryParse;
+        private TextBox txtName1;
+        private TextBox txtName2;
     }
 }
