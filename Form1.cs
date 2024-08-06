@@ -128,6 +128,7 @@ namespace Switch_CSharp_Forms
             if (string.Compare(name1, name2) < 0)
             {
                 lbxStringOp.Items.Add("string.Compare(name1, name2) < 0");
+                lbxStringOp.Items.Add("right smaller than left");
 
             }
             else if (string.Compare(name1, name2) == 0)
@@ -137,7 +138,7 @@ namespace Switch_CSharp_Forms
             else if (string.Compare(name1, name2) > 0)
             {
                 lbxStringOp.Items.Add("string.Compare(name1, name2) > 0");
-
+lbxStringOp.Items.Add("right bigger than left");
             }
             lbxStringOp.Items.Add(name1 + " " + charName1 + " name1 total " + countName1);
             lbxStringOp.Items.Add(name2 + " " + charName2 + " name2 total " + countName2);
