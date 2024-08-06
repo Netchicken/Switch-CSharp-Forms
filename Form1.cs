@@ -3,13 +3,16 @@ namespace Switch_CSharp_Forms
     public partial class Form1 : Form
     {
         string selectedDay = "";
-        List<string> myWeek = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
         }
         private void btnLoadDOW_Click(object sender, EventArgs e)
         {
+            // Create a list 
+            List<string> myWeek = new List<string>();
+            //add in the items you want to your list
             myWeek =
             [
                 "Monday",
@@ -21,7 +24,7 @@ namespace Switch_CSharp_Forms
                 "Sunday",
                 "Any Day",
             ];
-
+            //pass that list into your listbox
             lbxDayOfWeek.Items.AddRange(myWeek.ToArray());
         }
 
@@ -138,7 +141,7 @@ namespace Switch_CSharp_Forms
             else if (string.Compare(name1, name2) > 0)
             {
                 lbxStringOp.Items.Add("string.Compare(name1, name2) > 0");
-lbxStringOp.Items.Add("right bigger than left");
+                lbxStringOp.Items.Add("right bigger than left");
             }
             lbxStringOp.Items.Add(name1 + " " + charName1 + " name1 total " + countName1);
             lbxStringOp.Items.Add(name2 + " " + charName2 + " name2 total " + countName2);
@@ -171,6 +174,23 @@ lbxStringOp.Items.Add("right bigger than left");
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void lbxStringOp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Text = lbxStringOp.Items[lbxStringOp.SelectedIndex].ToString();
+        }
+
+        private void btnPercentage_Click(object sender, EventArgs e)
+        {
+            Single number = 0, percent = 0.5f;
+
+            number = Convert.ToSingle(txtNumber.Text);
+            percent = Convert.ToSingle(txtPercent.Text);
+            lblpercentMinus.Text = "Percent Minus " + (number - (percent * number)).ToString();
+
+            lblPercent.Text = "Percent " + (percent * number).ToString() + "%";
 
         }
     }
